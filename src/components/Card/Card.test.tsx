@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import Card from './Card';
 
 describe('Card', () => {
-  it(' title and content', () => {
+  test(' title and content', () => {
     const { getByText } = render(
       <Card
         title="Test Title"
@@ -16,7 +16,7 @@ describe('Card', () => {
     expect(getByText('Test Content')).toBeVisible();
   });
 
-  it('displays the card as disabled', () => {
+  test('displays the card as disabled', () => {
     const { getByText, container } = render(
       <Card
         title="Test Title"
